@@ -1,11 +1,11 @@
-// Project: Leopold Homepage
+// Project: Cubit Example
 // Author: Daniel Krentzlin
 // Project begin: 23.06.2023
 // Dev Environment: Android Studio
 // Platform: Windows 11
 // Copyright: Walnut IT 2022
 // ID: .state_template
-// 07.07.2022 16:15
+// 05.10.2033 10:43
 
 import 'package:equatable/equatable.dart';
 
@@ -34,35 +34,25 @@ class StateTemplate<T> extends Equatable {
 
   /// Creates an [StateTemplate]
   /// of the type [StateTemplateType.initial]
-  ///
-  /// ID: application.controller.ui.flutter_bloc.view.request_state.RequestState.initial
   const factory StateTemplate.initial() = _InitialRequestState<T>;
 
   /// Creates an [StateTemplate]
   /// of the type [StateTemplateType.initial]
-  ///
-  /// ID: application.controller.ui.flutter_bloc.view.request_state.RequestState.initial
   const factory StateTemplate.initialized({T? data}) =
       _InitializedRequestState<T>;
 
   /// Creates an [StateTemplate]
   /// of the type [StateTemplateType.loading]
-  ///
-  /// ID: application.controller.ui.flutter_bloc.view.request_state.RequestState.loading
   const factory StateTemplate.loading({T? previousData}) =
       _LoadingRequestState<T>;
 
   /// Creates an [StateTemplate]
   /// of the type [StateTemplateType.loaded]
-  ///
-  /// ID: application.controller.ui.flutter_bloc.view.request_state.RequestState.loaded
   const factory StateTemplate.loaded({required T? data}) =
       _LoadedRequestState<T>;
 
   /// Creates an [StateTemplate]
   /// of the type [StateTemplateType.error]
-  ///
-  /// ID: application.controller.ui.flutter_bloc.view.request_state.RequestState.error
   const factory StateTemplate.error() = _ErrorRequestState<T>;
 
   /// Variable that represents the current state of the request operation
