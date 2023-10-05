@@ -1,6 +1,6 @@
 // Project: Cubit Example
 // Author: Daniel Krentzlin
-// Project begin: 23.06.2023
+// Project begin: 05.10.2023
 // Dev Environment: Android Studio
 // Platform: Windows 11
 // Copyright: Walnut IT 2022
