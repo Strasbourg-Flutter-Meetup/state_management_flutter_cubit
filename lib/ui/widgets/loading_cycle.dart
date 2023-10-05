@@ -1,6 +1,6 @@
-// Project: Weather Poser
+// Project: Cubit Example
 // Author: Daniel Krentzlin
-// Project begin: 18.18.2022
+// Project begin: 05.10.2023
 // Dev Environment: Android Studio
 // Platform: Windows 11
 // Copyright: Walnut IT 2023
@@ -8,16 +8,16 @@
 // 05.10.2023 09:37
 import 'package:flutter/material.dart';
 
-/// The `LoadingCycle` widget is a Flutter `StatelessWidget` that displays a
-/// circular loading indicator in the form of a `CircularProgressIndicator`.
+/// The [LoadingCycle] widget is a Flutter [StatelessWidget] that displays a
+/// circular loading indicator in the form of a [CircularProgressIndicator].
 /// This widget is commonly used to indicate that a process or operation is in
 /// progress and the user should wait for it to complete.
 class LoadingCycle extends StatelessWidget {
-  /// Constructor for the `LoadingCycle` widget.
+  /// Constructor for the [LoadingCycle] widget.
   ///
   /// [key] is an optional parameter that can be used to provide a key for
   /// this widget.
-  const LoadingCycle({Key? key});
+  const LoadingCycle({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,6 +1,6 @@
-// Project: Weather Poser
+// Project: Cubit Example
 // Author: Daniel Krentzlin
-// Project begin: 18.18.2022
+// Project begin: 05.10.2023
 // Dev Environment: Android Studio
 // Platform: Windows 11
 // Copyright: Walnut IT 2023
@@ -14,12 +14,12 @@ import 'package:cubit_example/ui/widgets/loading_cycle.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-/// The `Bulb` widget is a Flutter `StatelessWidget` that displays the state of
+/// The [Bulb] widget is a Flutter `StatelessWidget` that displays the state of
 /// a bulb using the `BulbCubit` state management. It listens to changes in the
 /// `BulbCubit` state via the `context` and displays appropriate UI based on
 /// the state.
 class Bulb extends StatelessWidget {
-  /// Constructor for the `Bulb` widget.
+  /// Constructor for the [Bulb] widget.
   ///
   /// [key] is an optional parameter that can be used to provide a key for
   /// this widget.

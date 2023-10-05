@@ -1,7 +1,7 @@
 import 'package:cubit_example/features/dashboard/presentation/screen/dashboard.dart';
 import 'package:flutter/material.dart';
 
-/// The `MyApp` widget is the root of the Flutter application. It defines the
+/// The [MyApp] widget is the root of the Flutter application. It defines the
 /// top-level configuration for the app, including its title, theme, and the
 /// initial screen to display.
 class MyApp extends StatelessWidget {

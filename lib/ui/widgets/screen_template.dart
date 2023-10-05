@@ -1,6 +1,6 @@
-// Project: Weather Poser
+// Project: Cubit Example
 // Author: Daniel Krentzlin
-// Project begin: 18.18.2022
+// Project begin: 05.10.2023
 // Dev Environment: Android Studio
 // Platform: Windows 11
 // Copyright: Walnut IT 2023
@@ -8,11 +8,11 @@
 // 05.10.2023 09:32
 import 'package:flutter/material.dart';
 
-/// The `ScreenTemplate` widget is a Flutter `StatelessWidget` that provides a
+/// The [ScreenTemplate] widget is a Flutter [StatelessWidget] that provides a
 /// basic template for creating screens or pages. It includes common layout
 /// elements such as a safe area, scaffold, and a scrollable content area.
 class ScreenTemplate extends StatelessWidget {
-  /// Constructor for the `ScreenTemplate` widget.
+  /// Constructor for the [ScreenTemplate] widget.
   ///
   /// [key] is an optional parameter that can be used to provide a key for
   /// this widget.

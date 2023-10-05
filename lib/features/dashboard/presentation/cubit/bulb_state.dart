@@ -1,6 +1,6 @@
-// Project: Weather Poser
+// Project: Cubit Example
 // Author: Daniel Krentzlin
-// Project begin: 18.18.2022
+// Project begin: 05.10.2023
 // Dev Environment: Android Studio
 // Platform: Windows 11
 // Copyright: Walnut IT 2023
@@ -9,11 +9,11 @@
 import 'package:cubit_example/state_template/state_template.dart';
 import 'package:equatable/equatable.dart';
 
-/// The `BulbStateData` class represents the data associated with the state of a
-/// light bulb in a Flutter application. It extends `Equatable` to facilitate
+/// The [BulbStateData] class represents the data associated with the state of a
+/// light bulb in a Flutter application. It extends [Equatable] to facilitate
 /// state comparison.
 class BulbStateData extends Equatable {
-  /// Constructor for the `BulbStateData` class.
+  /// Constructor for the [BulbStateData] class.
   ///
   /// [bulbIsOn] is a boolean indicating whether the bulb is on or off.
   const BulbStateData({required this.bulbIsOn});
@@ -26,7 +26,7 @@ class BulbStateData extends Equatable {
     bulbIsOn,
   ];
 
-  /// Creates a copy of the `BulbStateData` object with optional parameter values.
+  /// Creates a copy of the [BulbStateData] object with optional parameter values.
   ///
   /// [bulbIsOn] is an optional parameter to update the `bulbIsOn` property.
   /// If not provided, the current `bulbIsOn` value will be retained.
@@ -35,7 +35,7 @@ class BulbStateData extends Equatable {
   );
 }
 
-/// A typedef for the `BulbState` using a custom `StateTemplate` with
+/// A typedef for the [BulbState] using a custom `StateTemplate` with
 /// `BulbStateData`.
 typedef BulbState = StateTemplate<BulbStateData>;
 

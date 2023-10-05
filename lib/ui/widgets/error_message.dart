@@ -1,18 +1,18 @@
-// Project: Weather Poser
+// Project: Cubit Example
 // Author: Daniel Krentzlin
-// Project begin: 18.18.2022
+// Project begin: 05.10.2023
 // Dev Environment: Android Studio
 // Platform: Windows 11
 // Copyright: Walnut IT 2023
 // ID: 20231005093643
 // 05.10.2023 09:36
 import 'package:flutter/material.dart';
-/// The `ErrorMessage` widget is a Flutter `StatelessWidget` that displays an
+/// The [ErrorMessage] widget is a Flutter [StatelessWidget] that displays an
 /// error message with an error icon (a red exclamation mark) and a text message.
 /// It is commonly used to inform the user about errors or issues that have
 /// occurred within the application.
 class ErrorMessage extends StatelessWidget {
-  /// Constructor for the `ErrorMessage` widget.
+  /// Constructor for the [ErrorMessage] widget.
   ///
   /// [key] is an optional parameter that can be used to provide a key for
   /// this widget.
