@@ -1,12 +1,3 @@
-// Project: Cubit Example
-// Author: Daniel Krentzlin
-// Project begin: 05.10.2023
-// Dev Environment: Android Studio
-// Platform: Windows 11
-// Copyright: Walnut IT 2023
-// ID: .state_template
-// 05.10.2033 10:43
-
 import 'package:equatable/equatable.dart';
 
 /// Variable that represents the current state of the request operation.
