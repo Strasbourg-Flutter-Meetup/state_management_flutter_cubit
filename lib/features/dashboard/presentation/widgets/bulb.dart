@@ -32,14 +32,13 @@ class Bulb extends StatelessWidget {
 
     // Determine the UI to display based on the state.
     switch (state.type) {
-      case StateTemplateType.initial:
-      case StateTemplateType.loading:
-      // Display a loading indicator.
+      case StateTemplateType.initial || StateTemplateType.loading:
+        // Display a loading indicator.
         return const CenterTemplate(
           child: LoadingCycle(),
         );
       case StateTemplateType.error:
-      // Display an error message.
+        // Display an error message.
         return const CenterTemplate(
           child: ErrorMessage(),
         );

@@ -10,6 +10,4 @@
 enum GlobalEvent {
   /// Event to update the state of the bulb on the dashboard screen.
   updateBulbState,
-
 }
-
