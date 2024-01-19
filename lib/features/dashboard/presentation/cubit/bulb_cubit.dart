@@ -38,21 +38,20 @@ class BulbCubit extends Cubit<BulbState> {
   /// A subscription to a stream of events on the global event bus, allowing the application to listen for and react to specific events.
   StreamSubscription? _globalEventBusStreamSubscription;
 
-
   /// Getter method to check if the bulb is on.
   bool get bulbIsOn => _bulbIsOn;
 
   /// Initializes the bulb state.
   ///
-  /// This method emits a loading state, updates the state data, and then emits a
-  /// loaded state with the updated data.
+  /// This method sets up necessary listeners and updates the internal state data
+  /// of the bulb. After setting up, it emits an [BulbState.initialized] state
+  /// with the updated data. This is typically called during the initialization
+  /// process of the bloc and is responsible for preparing the bulb's initial state.
   void initialize() {
-    emit(const BulbState.loading());
-
     _listenToGlobalEventBus();
     _updateStateData();
 
-    emit(BulbState.loaded(
+    emit(BulbState.initialized(
       data: _stateData,
     ));
   }
@@ -89,10 +88,6 @@ class BulbCubit extends Cubit<BulbState> {
     ));
   }
 
-  Future<void> cancelGlobalEventBusStreamSubscription() async {
-    await _globalEventBusStreamSubscription?.cancel();
-  }
-
   /// Updates the `_stateData` with the current bulb state.
   void _updateStateData() {
     _stateData = BulbStateData(bulbIsOn: _bulbIsOn);
@@ -105,7 +100,7 @@ class BulbCubit extends Cubit<BulbState> {
     // GlobalEvent.updateBulbState event.
     _globalEventBusStreamSubscription = globalEventBus.eventBus
         .where(
-          (event) => event == GlobalEvent.updateBulbState,
+      (event) => event == GlobalEvent.updateBulbState,
     )
         .listen((event) {
       // When the updateBulbState event is received, toggle the state of the bulb.
@@ -117,4 +112,9 @@ class BulbCubit extends Cubit<BulbState> {
     });
   }
 
+  @override
+  Future<void> close() async {
+    await _globalEventBusStreamSubscription?.cancel();
+    return super.close();
+  }
 }
