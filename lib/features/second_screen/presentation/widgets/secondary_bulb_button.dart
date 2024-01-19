@@ -27,6 +27,7 @@ class SecondaryBulbButton extends StatelessWidget {
       onPressed: () {
         // Adds a global event to the event bus to update the bulb state.
         GlobalEventBus.instance.addEvent(GlobalEvent.updateBulbState);
+        Navigator.of(context).pop();
       },
       child: const Text('Click me'),
     );
