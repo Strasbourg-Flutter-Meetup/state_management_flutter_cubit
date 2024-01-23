@@ -20,7 +20,7 @@ class CenterTemplate extends StatelessWidget {
   ///
   /// [child] is a required parameter that represents the child widget to be
   /// centered within its parent.
-  const CenterTemplate({Key? key, required this.child});
+  const CenterTemplate({super.key, required this.child});
 
   /// The child widget to be centered within its parent.
   final Widget child;
@@ -33,5 +33,3 @@ class CenterTemplate extends StatelessWidget {
     );
   }
 }
-
-
