@@ -7,6 +7,7 @@
 // ID: 20231005094420
 // 05.10.2023 09:44
 import 'package:cubit_example/features/dashboard/presentation/cubit/bulb_cubit.dart';
+import 'package:cubit_example/features/dashboard/presentation/cubit/bulb_state.dart';
 import 'package:cubit_example/state_template/state_template.dart';
 import 'package:cubit_example/ui/widgets/center_template.dart';
 import 'package:cubit_example/ui/widgets/error_message.dart';
@@ -31,35 +32,30 @@ class Bulb extends StatelessWidget {
     final state = context.watch<BulbCubit>().state;
 
     // Determine the UI to display based on the state.
-    switch (state.type) {
-      case StateTemplateType.initial || StateTemplateType.loading:
+    return switch (state) {
+      InitialRequestState() ||
+      LoadingRequestState() =>
         // Display a loading indicator.
-        return const CenterTemplate(
+        const CenterTemplate(
           child: LoadingCycle(),
-        );
-      case StateTemplateType.error:
+        ),
+      ErrorRequestState() =>
         // Display an error message.
-        return const CenterTemplate(
+        const CenterTemplate(
           child: ErrorMessage(),
-        );
-
-      default:
-        final stateData = state.data;
-
-        // If stateData is null, display an error message.
-        if (stateData == null) {
-          return const CenterTemplate(
-            child: ErrorMessage(),
-          );
-        }
-
-        // Display a message indicating whether the bulb is on or off.
-        return Center(
+        ),
+      InitializedRequestState(data: null) ||
+      LoadedRequestState(data: null) =>
+        const CenterTemplate(
+          child: ErrorMessage(),
+        ),
+      InitializedRequestState(data: BulbStateData stateData) ||
+      LoadedRequestState(data: BulbStateData stateData) =>
+        Center(
           child: stateData.bulbIsOn
               ? const Text('Bulb is on!')
               : const Text('Bulb is off!'),
-        );
-    }
+        ),
+    };
   }
 }
-
